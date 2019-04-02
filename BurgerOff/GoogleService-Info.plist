@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>291418563942-1tghnqa7hc93j83vffe5e1pvtc09vlkh.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.291418563942-1tghnqa7hc93j83vffe5e1pvtc09vlkh</string>
+	<key>API_KEY</key>
+	<string>AIzaSyAUHlcFGXhyZUdm3makh0WeFSWQOq_MTqw</string>
+	<key>GCM_SENDER_ID</key>
+	<string>291418563942</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>joshinc.BurgerOff</string>
+	<key>PROJECT_ID</key>
+	<string>burgeroff-85ffe</string>
+	<key>STORAGE_BUCKET</key>
+	<string>burgeroff-85ffe.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:291418563942:ios:bb6acf07b9406d4b</string>
+	<key>DATABASE_URL</key>
+	<string>https://burgeroff-85ffe.firebaseio.com</string>
+</dict>
+</plist>
