@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2EACB69C2B3E477C5B4BD40C /* Pods_BurgerOffTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E42F8DD21CF01E5BC9DFF55E /* Pods_BurgerOffTests.framework */; };
+		371D6B0914D95AC963EADECF /* Pods_BurgerOffUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1BEFA080DD7D370A020DF9D /* Pods_BurgerOffUITests.framework */; };
 		529B1DE422538F7A002DB27D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529B1DE322538F7A002DB27D /* AppDelegate.swift */; };
 		529B1DE622538F7A002DB27D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529B1DE522538F7A002DB27D /* ViewController.swift */; };
 		529B1DE922538F7A002DB27D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 529B1DE722538F7A002DB27D /* Main.storyboard */; };
@@ -14,6 +16,7 @@
 		529B1DEE22538F7B002DB27D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 529B1DEC22538F7B002DB27D /* LaunchScreen.storyboard */; };
 		529B1DF922538F7B002DB27D /* BurgerOffTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529B1DF822538F7B002DB27D /* BurgerOffTests.swift */; };
 		529B1E0422538F7B002DB27D /* BurgerOffUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529B1E0322538F7B002DB27D /* BurgerOffUITests.swift */; };
+		CBBBFE415702B37D47B0B437 /* Pods_BurgerOff.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8AECF260AAB2E9B4C790EAF /* Pods_BurgerOff.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		015FAB997A2C1E847895F7CF /* Pods-BurgerOffTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BurgerOffTests.debug.xcconfig"; path = "Target Support Files/Pods-BurgerOffTests/Pods-BurgerOffTests.debug.xcconfig"; sourceTree = "<group>"; };
+		29067B7797414230CD3D4AB2 /* Pods-BurgerOffTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BurgerOffTests.release.xcconfig"; path = "Target Support Files/Pods-BurgerOffTests/Pods-BurgerOffTests.release.xcconfig"; sourceTree = "<group>"; };
 		529B1DE022538F7A002DB27D /* BurgerOff.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BurgerOff.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		529B1DE322538F7A002DB27D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		529B1DE522538F7A002DB27D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +52,13 @@
 		529B1DFF22538F7B002DB27D /* BurgerOffUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BurgerOffUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		529B1E0322538F7B002DB27D /* BurgerOffUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BurgerOffUITests.swift; sourceTree = "<group>"; };
 		529B1E0522538F7B002DB27D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5D676A8AFFDBFE259C27D209 /* Pods-BurgerOffUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BurgerOffUITests.release.xcconfig"; path = "Target Support Files/Pods-BurgerOffUITests/Pods-BurgerOffUITests.release.xcconfig"; sourceTree = "<group>"; };
+		829BE6268645A7C45CDE688B /* Pods-BurgerOff.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BurgerOff.debug.xcconfig"; path = "Target Support Files/Pods-BurgerOff/Pods-BurgerOff.debug.xcconfig"; sourceTree = "<group>"; };
+		8D9E648F71E352D95FEC38CE /* Pods-BurgerOff.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BurgerOff.release.xcconfig"; path = "Target Support Files/Pods-BurgerOff/Pods-BurgerOff.release.xcconfig"; sourceTree = "<group>"; };
+		9810961073665EC764D09988 /* Pods-BurgerOffUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BurgerOffUITests.debug.xcconfig"; path = "Target Support Files/Pods-BurgerOffUITests/Pods-BurgerOffUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		A1BEFA080DD7D370A020DF9D /* Pods_BurgerOffUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BurgerOffUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E42F8DD21CF01E5BC9DFF55E /* Pods_BurgerOffTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BurgerOffTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F8AECF260AAB2E9B4C790EAF /* Pods_BurgerOff.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BurgerOff.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CBBBFE415702B37D47B0B437 /* Pods_BurgerOff.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2EACB69C2B3E477C5B4BD40C /* Pods_BurgerOffTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				371D6B0914D95AC963EADECF /* Pods_BurgerOffUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +96,8 @@
 				529B1DF722538F7B002DB27D /* BurgerOffTests */,
 				529B1E0222538F7B002DB27D /* BurgerOffUITests */,
 				529B1DE122538F7A002DB27D /* Products */,
+				C7F7CA2B096AC516A3CAC676 /* Pods */,
+				D63BEF19D5D1DF93CDB8FE14 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -125,6 +142,30 @@
 			path = BurgerOffUITests;
 			sourceTree = "<group>";
 		};
+		C7F7CA2B096AC516A3CAC676 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				829BE6268645A7C45CDE688B /* Pods-BurgerOff.debug.xcconfig */,
+				8D9E648F71E352D95FEC38CE /* Pods-BurgerOff.release.xcconfig */,
+				015FAB997A2C1E847895F7CF /* Pods-BurgerOffTests.debug.xcconfig */,
+				29067B7797414230CD3D4AB2 /* Pods-BurgerOffTests.release.xcconfig */,
+				9810961073665EC764D09988 /* Pods-BurgerOffUITests.debug.xcconfig */,
+				5D676A8AFFDBFE259C27D209 /* Pods-BurgerOffUITests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		D63BEF19D5D1DF93CDB8FE14 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F8AECF260AAB2E9B4C790EAF /* Pods_BurgerOff.framework */,
+				E42F8DD21CF01E5BC9DFF55E /* Pods_BurgerOffTests.framework */,
+				A1BEFA080DD7D370A020DF9D /* Pods_BurgerOffUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +173,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 529B1E0822538F7B002DB27D /* Build configuration list for PBXNativeTarget "BurgerOff" */;
 			buildPhases = (
+				28BE8B29F4E127F867DD168B /* [CP] Check Pods Manifest.lock */,
 				529B1DDC22538F7A002DB27D /* Sources */,
 				529B1DDD22538F7A002DB27D /* Frameworks */,
 				529B1DDE22538F7A002DB27D /* Resources */,
+				51E958691C3FCC0CD14C7912 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -149,6 +192,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 529B1E0B22538F7B002DB27D /* Build configuration list for PBXNativeTarget "BurgerOffTests" */;
 			buildPhases = (
+				104368C2E6D5BFFBAB946FE3 /* [CP] Check Pods Manifest.lock */,
 				529B1DF022538F7B002DB27D /* Sources */,
 				529B1DF122538F7B002DB27D /* Frameworks */,
 				529B1DF222538F7B002DB27D /* Resources */,
@@ -167,6 +211,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 529B1E0E22538F7B002DB27D /* Build configuration list for PBXNativeTarget "BurgerOffUITests" */;
 			buildPhases = (
+				6E39308EF32C007B15A902FC /* [CP] Check Pods Manifest.lock */,
 				529B1DFB22538F7B002DB27D /* Sources */,
 				529B1DFC22538F7B002DB27D /* Frameworks */,
 				529B1DFD22538F7B002DB27D /* Resources */,
@@ -250,6 +295,113 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		104368C2E6D5BFFBAB946FE3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BurgerOffTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		28BE8B29F4E127F867DD168B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BurgerOff-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		51E958691C3FCC0CD14C7912 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BurgerOff/Pods-BurgerOff-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftKeychainWrapper/SwiftKeychainWrapper.framework",
+				"${BUILT_PRODUCTS_DIR}/lottie-ios/Lottie.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftKeychainWrapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Lottie.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BurgerOff/Pods-BurgerOff-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6E39308EF32C007B15A902FC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BurgerOffUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		529B1DDC22538F7A002DB27D /* Sources */ = {
@@ -430,6 +582,7 @@
 		};
 		529B1E0922538F7B002DB27D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 829BE6268645A7C45CDE688B /* Pods-BurgerOff.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -448,6 +601,7 @@
 		};
 		529B1E0A22538F7B002DB27D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8D9E648F71E352D95FEC38CE /* Pods-BurgerOff.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -466,6 +620,7 @@
 		};
 		529B1E0C22538F7B002DB27D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 015FAB997A2C1E847895F7CF /* Pods-BurgerOffTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -487,6 +642,7 @@
 		};
 		529B1E0D22538F7B002DB27D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 29067B7797414230CD3D4AB2 /* Pods-BurgerOffTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -508,6 +664,7 @@
 		};
 		529B1E0F22538F7B002DB27D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9810961073665EC764D09988 /* Pods-BurgerOffUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -528,6 +685,7 @@
 		};
 		529B1E1022538F7B002DB27D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5D676A8AFFDBFE259C27D209 /* Pods-BurgerOffUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

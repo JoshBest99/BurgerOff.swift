@@ -1,0 +1,124 @@
+PODS:
+  - Alamofire (4.8.2)
+  - Bolts (1.9.0):
+    - Bolts/AppLinks (= 1.9.0)
+    - Bolts/Tasks (= 1.9.0)
+  - Bolts/AppLinks (1.9.0):
+    - Bolts/Tasks
+  - Bolts/Tasks (1.9.0)
+  - FBSDKCoreKit (4.43.0):
+    - Bolts (~> 1.9)
+  - FBSDKLoginKit (4.43.0):
+    - FBSDKCoreKit
+  - Firebase (4.0.3):
+    - Firebase/Core (= 4.0.3)
+  - Firebase/Auth (4.0.3):
+    - Firebase/Core
+    - FirebaseAuth (= 4.0.0)
+  - Firebase/Core (4.0.3):
+    - FirebaseAnalytics (= 4.0.2)
+    - FirebaseCore (= 4.0.3)
+  - Firebase/Database (4.0.3):
+    - Firebase/Core
+    - FirebaseDatabase (= 4.0.0)
+  - Firebase/Messaging (4.0.3):
+    - Firebase/Core
+    - FirebaseMessaging (= 2.0.0)
+  - Firebase/Storage (4.0.3):
+    - Firebase/Core
+    - FirebaseStorage (= 2.0.0)
+  - FirebaseAnalytics (4.0.2):
+    - FirebaseCore (~> 4.0)
+    - FirebaseInstanceID (~> 2.0)
+    - "GoogleToolboxForMac/NSData+zlib (~> 2.1)"
+  - FirebaseAuth (4.0.0):
+    - FirebaseAnalytics (~> 4.0)
+    - "GoogleToolboxForMac/NSDictionary+URLArguments (~> 2.1)"
+    - GTMSessionFetcher/Core (~> 1.1)
+  - FirebaseCore (4.0.3):
+    - "GoogleToolboxForMac/NSData+zlib (~> 2.1)"
+  - FirebaseDatabase (4.0.0):
+    - FirebaseAnalytics (~> 4.0)
+  - FirebaseInstanceID (2.0.10):
+    - FirebaseCore (~> 4.0)
+  - FirebaseMessaging (2.0.0):
+    - FirebaseAnalytics (~> 4.0)
+    - FirebaseCore (~> 4.0)
+    - FirebaseInstanceID (~> 2.0)
+    - GoogleToolboxForMac/Logger (~> 2.1)
+    - Protobuf (~> 3.1)
+  - FirebaseStorage (2.0.0):
+    - FirebaseAnalytics (~> 4.0)
+    - FirebaseCore (~> 4.0)
+    - GTMSessionFetcher/Core (~> 1.1)
+  - GoogleToolboxForMac/DebugUtils (2.2.0):
+    - GoogleToolboxForMac/Defines (= 2.2.0)
+  - GoogleToolboxForMac/Defines (2.2.0)
+  - GoogleToolboxForMac/Logger (2.2.0):
+    - GoogleToolboxForMac/Defines (= 2.2.0)
+  - "GoogleToolboxForMac/NSData+zlib (2.2.0)":
+    - GoogleToolboxForMac/Defines (= 2.2.0)
+  - "GoogleToolboxForMac/NSDictionary+URLArguments (2.2.0)":
+    - GoogleToolboxForMac/DebugUtils (= 2.2.0)
+    - GoogleToolboxForMac/Defines (= 2.2.0)
+    - "GoogleToolboxForMac/NSString+URLArguments (= 2.2.0)"
+  - "GoogleToolboxForMac/NSString+URLArguments (2.2.0)"
+  - GTMSessionFetcher/Core (1.2.1)
+  - lottie-ios (3.0.3)
+  - Protobuf (3.7.0)
+  - SwiftKeychainWrapper (3.2.0)
+
+DEPENDENCIES:
+  - Alamofire (~> 4.5)
+  - FBSDKLoginKit
+  - Firebase (= 4.0.3)
+  - Firebase/Auth (= 4.0.3)
+  - Firebase/Core (= 4.0.3)
+  - Firebase/Database (= 4.0.3)
+  - Firebase/Messaging
+  - Firebase/Storage (= 4.0.3)
+  - lottie-ios
+  - SwiftKeychainWrapper (~> 3.0)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - Bolts
+    - FBSDKCoreKit
+    - FBSDKLoginKit
+    - Firebase
+    - FirebaseAnalytics
+    - FirebaseAuth
+    - FirebaseCore
+    - FirebaseDatabase
+    - FirebaseInstanceID
+    - FirebaseMessaging
+    - FirebaseStorage
+    - GoogleToolboxForMac
+    - GTMSessionFetcher
+    - lottie-ios
+    - Protobuf
+    - SwiftKeychainWrapper
+
+SPEC CHECKSUMS:
+  Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
+  Bolts: ac6567323eac61e203f6a9763667d0f711be34c8
+  FBSDKCoreKit: cf5ff942be81ce3a45fdcbc244a3bf6f02612bac
+  FBSDKLoginKit: bea6daf533375bfb6e2bb1eefda5ccbdb3ce45ae
+  Firebase: 9e33fdfbca37cab635c693883caa90a4475b842b
+  FirebaseAnalytics: ad41720e3e67fc63fbe3d2948d3e26932a8de311
+  FirebaseAuth: ebb6abcbabae00fc47446d690c19ce68d8484fde
+  FirebaseCore: c709067051de07bdaffdc4e735cd7299a23c463a
+  FirebaseDatabase: d829b3a8c3e2ac7a16773c5df226966b0805dfc2
+  FirebaseInstanceID: 8d20d890d65c917f9f7d9950b6e10a760ad34321
+  FirebaseMessaging: 227406c05b0dc9290702d2e9f18ab5528f0c2cf2
+  FirebaseStorage: 8110a1ed2034c8fbfd83890d2acc9cdbbd99afec
+  GoogleToolboxForMac: ff31605b7d66400dcec09bed5861689aebadda4d
+  GTMSessionFetcher: 32aeca0aa144acea523e1c8e053089dec2cb98ca
+  lottie-ios: 06e0b54aab85ba128e332687d7f4ac4861a7a7ae
+  Protobuf: 7a877b7f3e5964e3fce995e2eb323dbc6831bb5a
+  SwiftKeychainWrapper: 82c4c02cdc36f9a24f7edfcaab3e336401caa1a1
+
+PODFILE CHECKSUM: d106245659b29038dac276dddc9a00dbf32e2fe5
+
+COCOAPODS: 1.6.1
