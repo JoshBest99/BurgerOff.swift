@@ -14,6 +14,11 @@
 		525E4B6D2253AC3F00263BFF /* RoundedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525E4B6C2253AC3F00263BFF /* RoundedImageView.swift */; };
 		525E4B6F2253AD1500263BFF /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525E4B6E2253AD1500263BFF /* RoundedButton.swift */; };
 		525E4B712253B0A600263BFF /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525E4B702253B0A600263BFF /* UIViewControllerExtension.swift */; };
+		526ACCBE225615BD00780058 /* FirebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526ACCBD225615BD00780058 /* FirebaseService.swift */; };
+		526ACCC022561CAF00780058 /* DataModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526ACCBF22561CAF00780058 /* DataModels.swift */; };
+		526ACCC22256488300780058 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526ACCC12256488300780058 /* Home.swift */; };
+		526ACCC4225648A200780058 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526ACCC3225648A200780058 /* UserCell.swift */; };
+		526ACCC722564A9500780058 /* ImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526ACCC622564A9400780058 /* ImageViewExtension.swift */; };
 		529B1DE422538F7A002DB27D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529B1DE322538F7A002DB27D /* AppDelegate.swift */; };
 		529B1DE622538F7A002DB27D /* SignIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529B1DE522538F7A002DB27D /* SignIn.swift */; };
 		529B1DE922538F7A002DB27D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 529B1DE722538F7A002DB27D /* Main.storyboard */; };
@@ -49,6 +54,11 @@
 		525E4B6C2253AC3F00263BFF /* RoundedImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedImageView.swift; sourceTree = "<group>"; };
 		525E4B6E2253AD1500263BFF /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		525E4B702253B0A600263BFF /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
+		526ACCBD225615BD00780058 /* FirebaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseService.swift; sourceTree = "<group>"; };
+		526ACCBF22561CAF00780058 /* DataModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModels.swift; sourceTree = "<group>"; };
+		526ACCC12256488300780058 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		526ACCC3225648A200780058 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
+		526ACCC622564A9400780058 /* ImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewExtension.swift; sourceTree = "<group>"; };
 		529B1DE022538F7A002DB27D /* BurgerOff.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BurgerOff.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		529B1DE322538F7A002DB27D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		529B1DE522538F7A002DB27D /* SignIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignIn.swift; sourceTree = "<group>"; };
@@ -102,7 +112,9 @@
 		525E4B652253978A00263BFF /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				525E4B702253B0A600263BFF /* UIViewControllerExtension.swift */,
+				526ACCC522564A8000780058 /* Extensions */,
+				526ACCBD225615BD00780058 /* FirebaseService.swift */,
+				526ACCBF22561CAF00780058 /* DataModels.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -124,8 +136,19 @@
 				529B1DE322538F7A002DB27D /* AppDelegate.swift */,
 				529B1DE522538F7A002DB27D /* SignIn.swift */,
 				525E4B6A2253A9CB00263BFF /* SignUp.swift */,
+				526ACCC12256488300780058 /* Home.swift */,
+				526ACCC3225648A200780058 /* UserCell.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		526ACCC522564A8000780058 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				525E4B702253B0A600263BFF /* UIViewControllerExtension.swift */,
+				526ACCC622564A9400780058 /* ImageViewExtension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		529B1DD722538F7A002DB27D = {
@@ -395,6 +418,8 @@
 				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/KVLoading/KVLoading.framework",
 				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftKeychainWrapper/SwiftKeychainWrapper.framework",
 				"${BUILT_PRODUCTS_DIR}/lottie-ios/Lottie.framework",
@@ -409,6 +434,8 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KVLoading.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftKeychainWrapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Lottie.framework",
@@ -447,11 +474,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				526ACCC022561CAF00780058 /* DataModels.swift in Sources */,
 				525E4B6D2253AC3F00263BFF /* RoundedImageView.swift in Sources */,
 				525E4B6F2253AD1500263BFF /* RoundedButton.swift in Sources */,
 				525E4B712253B0A600263BFF /* UIViewControllerExtension.swift in Sources */,
+				526ACCC22256488300780058 /* Home.swift in Sources */,
+				526ACCC722564A9500780058 /* ImageViewExtension.swift in Sources */,
 				529B1DE622538F7A002DB27D /* SignIn.swift in Sources */,
+				526ACCBE225615BD00780058 /* FirebaseService.swift in Sources */,
 				525E4B6B2253A9CB00263BFF /* SignUp.swift in Sources */,
+				526ACCC4225648A200780058 /* UserCell.swift in Sources */,
 				529B1DE422538F7A002DB27D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

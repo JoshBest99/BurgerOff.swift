@@ -17,6 +17,8 @@ target 'BurgerOff' do
 	pod 'SwiftKeychainWrapper', '~> 3.0'
 	pod 'Alamofire', '~> 4.5'
 	pod 'lottie-ios'
+	pod 'IQKeyboardManagerSwift'
+	pod 'KVLoading'
 
   target 'BurgerOffTests' do
     inherit! :search_paths
