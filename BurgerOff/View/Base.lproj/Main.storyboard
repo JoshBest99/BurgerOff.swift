@@ -228,7 +228,7 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" red="0.2901960784" green="0.30588235289999999" blue="0.32549019610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="usercell" rowHeight="100" id="hb1-qZ-5oE" customClass="UserCell" customModule="BurgerOff" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="usercell" rowHeight="100" id="hb1-qZ-5oE" customClass="UserCell" customModule="BurgerOff" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hb1-qZ-5oE" id="cUj-Z6-moh">
@@ -290,6 +290,9 @@
                                 <state key="normal" title="Logout">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="logoutBtnPressed:" destination="lf6-RG-6KM" eventType="touchUpInside" id="ifd-yI-X07"/>
+                                </connections>
                             </button>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" style="plain" id="JQo-t6-cyw">
@@ -299,16 +302,139 @@
                                 <state key="normal" title="Refresh">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="refreshBtnPressed:" destination="lf6-RG-6KM" eventType="touchUpInside" id="50d-9E-4bB"/>
+                                </connections>
                             </button>
+                            <connections>
+                                <action selector="refreshBtnPressed:" destination="lf6-RG-6KM" id="qTN-b4-5sQ"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="YTc-tw-Vv7" id="H64-UC-MbD"/>
+                        <segue destination="kpy-AD-Mb0" kind="showDetail" identifier="vote" id="I32-rc-edy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NGo-mM-KpK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2652" y="25.637181409295355"/>
+        </scene>
+        <!--Vote-->
+        <scene sceneID="PYz-Di-PP8">
+            <objects>
+                <viewController id="987-h7-MBZ" customClass="Vote" customModule="BurgerOff" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sb2-kH-RKW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Uia-qW-vbT">
+                                <rect key="frame" x="30" y="94" width="315" height="229.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Patty Quality: 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c95-6e-hdB">
+                                        <rect key="frame" x="0.0" y="0.0" width="123.5" height="21.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="50" translatesAutoresizingMaskIntoConstraints="NO" id="beQ-0R-JTL">
+                                        <rect key="frame" x="-2" y="36.5" width="319" height="31"/>
+                                        <color key="tintColor" red="0.50980392159999999" green="0.74117647060000003" blue="0.031372549020000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <action selector="pattySliderValueChanged:" destination="987-h7-MBZ" eventType="valueChanged" id="X7Q-xx-Czv"/>
+                                        </connections>
+                                    </slider>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Overall Burger Taste: 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QE3-PZ-HfW">
+                                        <rect key="frame" x="0.0" y="81.5" width="184.5" height="21.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.40000000000000002" minValue="0.0" maxValue="40" translatesAutoresizingMaskIntoConstraints="NO" id="hXz-9K-e5R">
+                                        <rect key="frame" x="-2" y="118" width="319" height="31"/>
+                                        <color key="tintColor" red="0.50980392159999999" green="0.74117647060000003" blue="0.031372549020000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <action selector="overallSliderValueChanged:" destination="987-h7-MBZ" eventType="valueChanged" id="NOx-Tu-0yT"/>
+                                        </connections>
+                                    </slider>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Appearance: 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tqb-nM-9hF">
+                                        <rect key="frame" x="0.0" y="163" width="118.5" height="21.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.10000000000000001" minValue="0.0" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="ixv-RB-yrE">
+                                        <rect key="frame" x="-2" y="199.5" width="319" height="31"/>
+                                        <color key="tintColor" red="0.50980392159999999" green="0.74117647060000003" blue="0.031372549020000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <action selector="appearanceSliderValueChanged:" destination="987-h7-MBZ" eventType="valueChanged" id="lGd-iG-xPf"/>
+                                        </connections>
+                                    </slider>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="ixv-RB-yrE" firstAttribute="leading" secondItem="Uia-qW-vbT" secondAttribute="leading" id="3UV-Nm-Nv4"/>
+                                    <constraint firstItem="beQ-0R-JTL" firstAttribute="leading" secondItem="Uia-qW-vbT" secondAttribute="leading" id="PjW-9a-xnk"/>
+                                    <constraint firstAttribute="trailing" secondItem="beQ-0R-JTL" secondAttribute="trailing" id="av5-3m-1yF"/>
+                                    <constraint firstAttribute="trailing" secondItem="hXz-9K-e5R" secondAttribute="trailing" id="gw2-qo-JKi"/>
+                                    <constraint firstAttribute="trailing" secondItem="ixv-RB-yrE" secondAttribute="trailing" id="sso-Ad-cvZ"/>
+                                    <constraint firstItem="hXz-9K-e5R" firstAttribute="leading" secondItem="Uia-qW-vbT" secondAttribute="leading" id="yZ2-OD-VZv"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iLs-U9-miP">
+                                <rect key="frame" x="75" y="557" width="225" height="50"/>
+                                <color key="backgroundColor" red="0.50980392159999999" green="0.74117647060000003" blue="0.031372549020000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="6T8-ee-YPk"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Submit">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="submitBtnPressed:" destination="987-h7-MBZ" eventType="touchUpInside" id="t5f-zh-JRP"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.2901960784" green="0.30588235289999999" blue="0.32549019610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Uia-qW-vbT" firstAttribute="top" secondItem="Sxb-WT-mQo" secondAttribute="top" constant="30" id="Bpw-f1-Jcg"/>
+                            <constraint firstItem="Uia-qW-vbT" firstAttribute="leading" secondItem="Sxb-WT-mQo" secondAttribute="leading" constant="30" id="FgG-Cv-v7f"/>
+                            <constraint firstItem="Sxb-WT-mQo" firstAttribute="bottom" secondItem="iLs-U9-miP" secondAttribute="bottom" constant="60" id="gSl-59-gzf"/>
+                            <constraint firstItem="Sxb-WT-mQo" firstAttribute="trailing" secondItem="iLs-U9-miP" secondAttribute="trailing" constant="75" id="iTU-Tc-rM4"/>
+                            <constraint firstItem="Sxb-WT-mQo" firstAttribute="trailing" secondItem="Uia-qW-vbT" secondAttribute="trailing" constant="30" id="rfy-JY-J86"/>
+                            <constraint firstItem="iLs-U9-miP" firstAttribute="leading" secondItem="Sxb-WT-mQo" secondAttribute="leading" constant="75" id="xPh-8P-1fk"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Sxb-WT-mQo"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="jBC-tu-ddA">
+                        <barButtonItem key="leftBarButtonItem" title="Item" style="plain" id="oGS-3R-KZy">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="NAQ-B5-ta1">
+                                <rect key="frame" x="16" y="7" width="83" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Back">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="backBtnPressed:" destination="987-h7-MBZ" eventType="touchUpInside" id="tbH-SN-kLg"/>
+                                </connections>
+                            </button>
+                            <connections>
+                                <action selector="backBtnPressed:" destination="987-h7-MBZ" id="KNK-XX-T71"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="appearanceLabel" destination="Tqb-nM-9hF" id="Tzj-aI-Ife"/>
+                        <outlet property="appearanceSlider" destination="ixv-RB-yrE" id="8f8-OH-nxj"/>
+                        <outlet property="overallLabel" destination="QE3-PZ-HfW" id="Phv-JU-K5T"/>
+                        <outlet property="overallSlider" destination="hXz-9K-e5R" id="iWL-n5-xYX"/>
+                        <outlet property="pattyLabel" destination="c95-6e-hdB" id="AWd-iF-FqP"/>
+                        <outlet property="pattySlider" destination="beQ-0R-JTL" id="yng-q1-fAT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5Jh-FI-fqc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4406" y="26"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="jYB-jP-isf">
@@ -332,8 +458,30 @@
             </objects>
             <point key="canvasLocation" x="1712.8" y="25.637181409295355"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="5B9-v3-Vck">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="kpy-AD-Mb0" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="4oQ-56-4im">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.2901960784" green="0.30588235289999999" blue="0.32549019610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="0.50980392159999999" green="0.74117647060000003" blue="0.031372549020000001" alpha="1" colorSpace="calibratedRGB"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="987-h7-MBZ" kind="relationship" relationship="rootViewController" id="iPK-cZ-uIy"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="boB-zg-4jq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3542" y="26"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="1VY-ps-qQ2"/>
+        <segue reference="8Je-Jx-cle"/>
     </inferredMetricsTieBreakers>
 </document>

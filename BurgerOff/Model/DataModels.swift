@@ -8,6 +8,8 @@
 
 import Foundation
 
+typealias DownloadComplete = () -> ()
+
 struct Ratings: Codable{
     
     var pattyTaste: Int
@@ -22,6 +24,7 @@ struct User: Codable {
     var uid: String
     var username: String
     var profileImageUrl: String
+    //var burgerImageUrl: String
     var ratings: Ratings
     
 }
