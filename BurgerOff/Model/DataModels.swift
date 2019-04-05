@@ -24,7 +24,7 @@ struct User: Codable {
     var uid: String
     var username: String
     var profileImageUrl: String
-    //var burgerImageUrl: String
+    var burgerImageUrl: String = ""
     var ratings: Ratings
     
 }

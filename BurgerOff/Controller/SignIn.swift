@@ -25,7 +25,11 @@ class SignIn: UIViewController {
         super.viewDidAppear(animated)
         if KeychainWrapper.standard.string(forKey: "email") != nil
             && KeychainWrapper.standard.string(forKey: "password") != nil{
-            self.performSegue(withIdentifier: "home", sender: self)
+            
+            let email = KeychainWrapper.standard.string(forKey: "email")
+            let password = KeychainWrapper.standard.string(forKey: "password")
+            signInUser(email: email!, password: password!)
+            //self.performSegue(withIdentifier: "home", sender: self)
         }
     }
     

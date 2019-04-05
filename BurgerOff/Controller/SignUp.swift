@@ -62,7 +62,7 @@ class SignUp: UIViewController {
     
     private func saveUserToDatabase(profileImageURL : String){
         let ratings = Ratings(pattyTaste: 0, burgerTaste: 0, appearance: 0, ratedUids: "")
-        let user = User(uid: FirebaseService.shared.USER_ID, username: usernameTextField.text!, profileImageUrl: profileImageURL, ratings: ratings)
+        let user = User(uid: FirebaseService.shared.USER_ID, username: usernameTextField.text!, profileImageUrl: profileImageURL,burgerImageUrl: "", ratings: ratings)
         let ref = FirebaseService.shared.USER_URL.child(FirebaseService.shared.USER_ID)
         
         do{

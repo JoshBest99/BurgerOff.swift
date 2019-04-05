@@ -21,6 +21,7 @@ class Home: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //FirebaseService.shared.setUSER_ID(userid: Auth.auth().currentUser!.uid)
     
         tableView.delegate = self
         tableView.dataSource = self
@@ -69,18 +70,20 @@ class Home: UIViewController {
         
     }
     
-    @IBAction func logoutBtnPressed(_ sender: UIButton) {
-        KeychainWrapper.standard.removeAllKeys()
-        self.view.window?.rootViewController?.dismiss(animated: true, completion: nil)
+    @IBAction func profileBtnPressed(_ sender: UIButton) {
+        
+        self.performSegue(withIdentifier: "profile", sender: self)
         
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+            
         if let navController = segue.destination as? UINavigationController {
             if let voteVC = navController.viewControllers.first as? Vote{
                 voteVC.user = selectedUser
             }
         }
+        
     }
 }
 

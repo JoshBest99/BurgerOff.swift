@@ -1,19 +1,19 @@
 //
-//  RoundedButton.swift
+//  CircleImageView.swift
 //  BurgerOff
 //
-//  Created by Joshua Best on 02/04/2019.
+//  Created by Joshua Best on 05/04/2019.
 //  Copyright © 2019 JoshInc. All rights reserved.
 //
 
 import UIKit
 
-class RoundedButton: UIButton {
-
+class CircleButton : UIButton {
+    
     override func layoutSubviews() {
         super.layoutSubviews()
         
-        layer.cornerRadius = 10
+        layer.cornerRadius = layer.bounds.width / 2
     }
-
+    
 }

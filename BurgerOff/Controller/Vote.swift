@@ -28,6 +28,9 @@ class Vote: UIViewController {
 
         self.title = "Voting for: \(user.username)"
         
+        print("User ID: \(user.uid)")
+        print("My ID: \(FirebaseService.shared.USER_ID)")
+        
     }
     
     private func submitRatings(pattyRating : Int, overallRating: Int, appearanceRating: Int, completed : @escaping () -> ()){

@@ -17,7 +17,7 @@ class FirebaseService {
     private let _storageURL = Storage.storage().reference()
     private let _userURL = Database.database().reference().child("users")
     private let _imagesURL = Storage.storage().reference().child("images")
-    private let _uid = Auth.auth().currentUser?.uid
+    private var _uid = Auth.auth().currentUser?.uid
     
     var BASE_URL : DatabaseReference {
         return _baseURL
@@ -37,6 +37,10 @@ class FirebaseService {
     
     var USER_ID : String {
         return _uid ?? ""
+    }
+    
+    func setUSER_ID(userid: String){
+        self._uid = userid
     }
     
 }
