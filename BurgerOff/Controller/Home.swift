@@ -111,7 +111,7 @@ extension Home : UITableViewDelegate, UITableViewDataSource{
         
         if selectedUser.uid == FirebaseService.shared.USER_ID{
             self.showAlert(title: "You can't do that", message: "You cannot vote for yourself")
-        } else if selectedUser.ratings.ratedUids.contains(FirebaseService.shared.USER_ID){
+        } else if selectedUser!.ratings!.ratedUids.contains(FirebaseService.shared.USER_ID){
             self.showAlert(title: "You can't do that", message: "You cannot vote for \(selectedUser.username) twice")
         } else {
             self.performSegue(withIdentifier: "vote", sender: self)

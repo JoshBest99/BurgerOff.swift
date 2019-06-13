@@ -34,8 +34,10 @@ class Vote: UIViewController {
     }
     
     private func submitRatings(pattyRating : Int, overallRating: Int, appearanceRating: Int, completed : @escaping () -> ()){
-        let updatedRatings = Ratings(pattyTaste: pattyRating + user.ratings.pattyTaste, burgerTaste: overallRating + user.ratings.burgerTaste, appearance: appearanceRating + user.ratings.appearance, ratedUids: user.ratings.ratedUids + FirebaseService.shared.USER_ID)
+        let updatedRatings = Ratings(pattyTaste: pattyRating + user!.ratings!.pattyTaste, burgerTaste: overallRating + user!.ratings!.burgerTaste, appearance: appearanceRating + user!.ratings!.appearance, ratedUids: user!.ratings!.ratedUids + FirebaseService.shared.USER_ID)
+        
         let ref = FirebaseService.shared.USER_URL.child(user.uid).child("ratings")
+        let currentUserRef = FirebaseService.shared.USER_URL.child(FirebaseService.shared.USER_ID).child("ratings").child("ratedScores").child(user.username)
         
         do{
             try ref.updateChildValues(updatedRatings.asDictionary(), withCompletionBlock: { (error, ref) in
@@ -43,6 +45,14 @@ class Vote: UIViewController {
                     self.showAlert(title: "Error", message: "Unsuccessful \(error!.localizedDescription)")
                 }
             })
+            
+            do {
+                
+                let userScoreDict = try Score(appearance: "\(appearanceRating)/10", burgerTaste: "\(overallRating)/40", pattyTaste: "\(pattyRating)/50").asDictionary()
+                
+                    currentUserRef.setValue(userScoreDict)
+                
+            } catch {}
             
             completed()
             

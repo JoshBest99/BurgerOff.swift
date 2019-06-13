@@ -21,7 +21,7 @@ class UserCell: UITableViewCell {
         nameLbl.text = user.username
         profileImageView.loadImageUsingCacheWithUrlString(user.profileImageUrl)
         
-        if user.ratings.ratedUids.contains(FirebaseService.shared.USER_ID) || user.uid == FirebaseService.shared.USER_ID{
+        if user.ratings!.ratedUids.contains(FirebaseService.shared.USER_ID) || user.uid == FirebaseService.shared.USER_ID{
             nameLbl.textColor = UIColor.green
         } else {
             nameLbl.textColor = UIColor.red

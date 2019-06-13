@@ -258,10 +258,10 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zd6-Gj-Rhx">
-                                <rect key="frame" x="219" y="205" width="35" height="35"/>
+                                <rect key="frame" x="209" y="205" width="45" height="45"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="35" id="DgT-KZ-qaN"/>
-                                    <constraint firstAttribute="width" constant="35" id="Ujh-Cm-sVd"/>
+                                    <constraint firstAttribute="height" constant="45" id="DgT-KZ-qaN"/>
+                                    <constraint firstAttribute="width" constant="45" id="Ujh-Cm-sVd"/>
                                 </constraints>
                                 <state key="normal" image="edit"/>
                                 <connections>
@@ -593,6 +593,6 @@
         <image name="edit" width="64" height="64"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="1VY-ps-qQ2"/>
+        <segue reference="8Je-Jx-cle"/>
     </inferredMetricsTieBreakers>
 </document>

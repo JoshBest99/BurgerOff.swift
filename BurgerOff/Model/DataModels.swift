@@ -25,7 +25,16 @@ struct User: Codable {
     var username: String
     var profileImageUrl: String
     var burgerImageUrl: String = ""
-    var ratings: Ratings
+    var ratings: Ratings?
+    var scores: [String:String]?
+    
+}
+
+struct Score: Codable {
+    
+    var appearance: String
+    var burgerTaste: String
+    var pattyTaste: String
     
 }
 
