@@ -60,7 +60,7 @@ class JoinTeam: UIViewController {
         })
     }
     
-    private func updateTeam(user: User, selectedTeam: Team) {
+    private func updateTeam(user: User, selectedTeam: Team, completed : @escaping DownloadComplete) {
         
         var team = selectedTeam
         
@@ -71,19 +71,20 @@ class JoinTeam: UIViewController {
         do {
             try ref.updateChildValues(team.asDictionary(), withCompletionBlock: { (error, ref) in
                 if error == nil {
-                    self.updateUser(selectedTeam: team)
+                    self.updateUser(selectedTeam: team, completed: completed)
                 }
             })
         } catch {}
     }
     
-    private func updateUser(selectedTeam: Team){
+    private func updateUser(selectedTeam: Team, completed : @escaping DownloadComplete){
         
         let ref = FirebaseService.shared.USER_URL.child(FirebaseService.shared.USER_ID).child("team")
         
         do {
             try ref.updateChildValues(selectedTeam.asDictionary(), withCompletionBlock: { (error, ref) in
                 if error == nil{
+                    completed()
                     self.performSegue(withIdentifier: "home", sender: self)
                 }
             })
@@ -91,7 +92,7 @@ class JoinTeam: UIViewController {
         
     }
     
-    private func getCurrentUser(selectedTeam: Team){
+    private func getCurrentUser(selectedTeam: Team, completed : @escaping DownloadComplete){
         let ref = FirebaseService.shared.USER_URL.child(FirebaseService.shared.USER_ID)
         
         ref.observeSingleEvent(of: .value) { snapshot in
@@ -104,7 +105,7 @@ class JoinTeam: UIViewController {
                 let user = try JSONDecoder().decode(User.self, from: data)
                 print("username \(user.username)")
                 print("userid \(user.uid)")
-                self.updateTeam(user: user, selectedTeam: selectedTeam)
+                self.updateTeam(user: user, selectedTeam: selectedTeam, completed: completed)
             } catch {
                 print(error)
             }
@@ -137,7 +138,10 @@ extension JoinTeam : UITableViewDelegate, UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.getCurrentUser(selectedTeam: teams[indexPath.row])
+        KVLoading.show()
+        self.getCurrentUser(selectedTeam: teams[indexPath.row]) {
+            KVLoading.hide()
+        }
     }
 }
 

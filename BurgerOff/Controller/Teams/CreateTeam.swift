@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import KVLoading
 
 class CreateTeam: UIViewController {
 
@@ -18,7 +19,7 @@ class CreateTeam: UIViewController {
 
     }
     
-    private func createTeam(user: User) {
+    private func createTeam(user: User, completed : @escaping DownloadComplete) {
         
         users.append(user)
         
@@ -30,13 +31,13 @@ class CreateTeam: UIViewController {
                 if error != nil {
                     self.showAlert(title: "Error", message: "Unsuccessful \(error!.localizedDescription)")
                 } else {
-                    self.updateTeam(team: team)
+                    self.updateTeam(team: team, completed: completed)
                 }
             })
         } catch {}
     }
     
-    private func updateTeam(team : Team){
+    private func updateTeam(team : Team,completed : @escaping DownloadComplete){
         
         let ref = FirebaseService.shared.USER_URL.child(FirebaseService.shared.USER_ID).child("team")
         
@@ -50,9 +51,11 @@ class CreateTeam: UIViewController {
             })
         }catch {}
         
+        completed()
+        
     }
     
-    private func getCurrentUser(){
+    private func getCurrentUser(completed : @escaping DownloadComplete){
         let ref = FirebaseService.shared.USER_URL.child(FirebaseService.shared.USER_ID)
         
         ref.observeSingleEvent(of: .value) { snapshot in
@@ -65,7 +68,7 @@ class CreateTeam: UIViewController {
                 let user = try JSONDecoder().decode(User.self, from: data)
                 print("username \(user.username)")
                 print("userid \(user.uid)")
-                self.createTeam(user: user)
+                self.createTeam(user: user, completed: completed)
             } catch {
                 print(error)
                 self.showAlert(title: "Error", message: error.localizedDescription)
@@ -75,7 +78,10 @@ class CreateTeam: UIViewController {
     }
     
     @IBAction func createBtnPressed(_ sender: Any) {
-        getCurrentUser()
+        KVLoading.show()
+        getCurrentUser{
+            KVLoading.hide()
+        }
     }
     
     @IBAction func backBtnPressed(_ sender: Any) {
