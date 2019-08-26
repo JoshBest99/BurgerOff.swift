@@ -16,6 +16,7 @@ class FirebaseService {
     private let _baseURL = Database.database().reference()
     private let _storageURL = Storage.storage().reference()
     private let _userURL = Database.database().reference().child("users")
+    private let _teamURL = Database.database().reference().child("teams")
     private let _imagesURL = Storage.storage().reference().child("images")
     private var _uid = Auth.auth().currentUser?.uid
     
@@ -29,6 +30,10 @@ class FirebaseService {
     
     var USER_URL : DatabaseReference {
         return _userURL
+    }
+    
+    var TEAM_URL : DatabaseReference {
+        return _teamURL
     }
     
     var IMAGES_URL : StorageReference {

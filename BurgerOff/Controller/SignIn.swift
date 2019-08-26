@@ -40,14 +40,40 @@ class SignIn: UIViewController {
             KVLoading.hide()
             
             if error == nil {
-                KeychainWrapper.standard.set(self.emailTextField.text!, forKey: "email")
-                KeychainWrapper.standard.set(self.passwordTextField.text!, forKey: "password")
-                self.performSegue(withIdentifier: "home", sender: self)
+                KeychainWrapper.standard.set(email, forKey: "email")
+                KeychainWrapper.standard.set(password, forKey: "password")
+                self.getCurrentUser()
             } else {
                 self.showAlert(title: "Error", message: "Unsuccessful \(error!.localizedDescription)")
             }
             
         }
+    }
+    
+    private func getCurrentUser(){
+        let ref = FirebaseService.shared.USER_URL.child(FirebaseService.shared.USER_ID)
+        
+        ref.observeSingleEvent(of: .value) { snapshot in
+            
+            print(snapshot)
+            guard let object = snapshot.value as? [String : Any] else { return }
+            
+            do{
+                let data = try JSONSerialization.data(withJSONObject: object, options: .prettyPrinted)
+                let user = try JSONDecoder().decode(User.self, from: data)
+                if user.team != nil {
+                    self.performSegue(withIdentifier: "home", sender: self)
+                } else {
+                    self.performSegue(withIdentifier: "teamoptions", sender: self)
+                }
+                
+            } catch {
+                print(error)
+                self.showAlert(title: "Error", message: error.localizedDescription)
+                KVLoading.hide()
+            }
+        }
+    
     }
     
     @IBAction func signInBtnPressed(_ sender: UIButton) {

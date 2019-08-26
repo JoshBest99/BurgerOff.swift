@@ -86,9 +86,9 @@ class Profile: UIViewController {
     }
     
     @IBAction func editImageBtnPressed(_ sender: Any) {
-        if UIImagePickerController.isSourceTypeAvailable(.camera){
-            self.showCameraAlert(picker: picker)
-        }
+//        if UIImagePickerController.isSourceTypeAvailable(.camera){
+//            self.showCameraAlert(picker: picker)
+//        }
     }
     
     @IBAction func logoutBtnPressed(_ sender: RoundedButton) {

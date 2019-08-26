@@ -21,39 +21,42 @@ class Vote: UIViewController {
     @IBOutlet weak var appearanceLabel: UILabel!
     @IBOutlet weak var appearanceSlider: UISlider!
     
-    var user : User!
+    var team : Team!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.title = "Voting for: \(user.username)"
+        self.title = "Voting for: \(team.name)"
         
-        print("User ID: \(user.uid)")
+        print("Team ID: \(team.uid)")
         print("My ID: \(FirebaseService.shared.USER_ID)")
         
     }
     
     private func submitRatings(pattyRating : Int, overallRating: Int, appearanceRating: Int, completed : @escaping () -> ()){
-        let updatedRatings = Ratings(pattyTaste: pattyRating + user!.ratings!.pattyTaste, burgerTaste: overallRating + user!.ratings!.burgerTaste, appearance: appearanceRating + user!.ratings!.appearance, ratedUids: user!.ratings!.ratedUids + FirebaseService.shared.USER_ID)
+        let updatedRatings = Score(pattyTaste: "\(pattyRating + Int(team!.score!.pattyTaste)!)", burgerTaste: "\(overallRating + Int(team!.score!.burgerTaste)!)", appearance: "\(appearanceRating + Int(team!.score!.appearance)!)")
         
-        let ref = FirebaseService.shared.USER_URL.child(user.uid).child("ratings")
-        let currentUserRef = FirebaseService.shared.USER_URL.child(FirebaseService.shared.USER_ID).child("ratings").child("ratedScores").child(user.username)
+        let teamRef = FirebaseService.shared.TEAM_URL.child(team.uid!)
+        let currentUserRef = FirebaseService.shared.USER_URL.child(FirebaseService.shared.USER_ID).child("ratings").child("ratedScores").child(team.name!)
         
         do{
-            try ref.updateChildValues(updatedRatings.asDictionary(), withCompletionBlock: { (error, ref) in
+            try teamRef.child("score").updateChildValues(updatedRatings.asDictionary(), withCompletionBlock: { (error, ref) in
                 if error != nil {
                     self.showAlert(title: "Error", message: "Unsuccessful \(error!.localizedDescription)")
                 }
             })
             
+            teamRef.child("voteesUids").setValue(team.voteesUids + FirebaseService.shared.USER_ID)
+            
             do {
                 
-                let userScoreDict = try Score(appearance: "\(appearanceRating)/10", burgerTaste: "\(overallRating)/40", pattyTaste: "\(pattyRating)/50").asDictionary()
+                let userScoreDict = try Score( pattyTaste: "\(pattyRating)/50", burgerTaste: "\(overallRating)/40", appearance: "\(appearanceRating)/10").asDictionary()
                 
-                    currentUserRef.setValue(userScoreDict)
+                currentUserRef.setValue(userScoreDict)
                 
             } catch {}
             
+            incrementVotesMade()
             completed()
             
         } catch {
@@ -61,9 +64,28 @@ class Vote: UIViewController {
         }
     }
     
+    private func incrementVotesMade(){
+        let votesRef = FirebaseService.shared.BASE_URL.child("votesmade")
+        
+        votesRef.observeSingleEvent(of: .value) { snapshot in
+            
+            guard let object = snapshot.value as? [String : Any] else { return }
+            
+            do{
+                let data = try JSONSerialization.data(withJSONObject: object, options: .prettyPrinted)
+                let score = try JSONDecoder().decode(Int.self, from: data)
+                votesRef.setValue(score + 1)
+            } catch {
+                print(error)
+                self.showAlert(title: "Error", message: error.localizedDescription)
+                KVLoading.hide()
+            }
+        }
+    }
+    
     private func getUpdatedUserValues(completed : @escaping () -> ()){
         
-        let ref = FirebaseService.shared.USER_URL.child(user.uid).child("ratings")
+        let ref = FirebaseService.shared.USER_URL.child("teams").child(team.uid!).child("/score")
         
         ref.observeSingleEvent(of: .value) { snapshot in
             
@@ -72,8 +94,8 @@ class Vote: UIViewController {
 
             do{
                 let data = try JSONSerialization.data(withJSONObject: object, options: .prettyPrinted)
-                let ratings = try JSONDecoder().decode(Ratings.self, from: data)
-                self.user.ratings = ratings
+                let score = try JSONDecoder().decode(Score.self, from: data)
+                self.team.score = score
                 completed()
             } catch {
                 print(error)

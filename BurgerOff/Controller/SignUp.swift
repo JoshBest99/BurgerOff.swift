@@ -62,7 +62,7 @@ class SignUp: UIViewController {
     
     private func saveUserToDatabase(profileImageURL : String){
         
-        let user = User(uid: FirebaseService.shared.USER_ID, username: usernameTextField.text!, profileImageUrl: profileImageURL,burgerImageUrl: "", ratings: nil, scores: nil)
+        let user = User(uid: FirebaseService.shared.USER_ID, username: usernameTextField.text!, profileImageUrl: profileImageURL,burgerImageUrl: "", team: nil)
         
         let ref = FirebaseService.shared.USER_URL.child(FirebaseService.shared.USER_ID)
         
@@ -75,7 +75,8 @@ class SignUp: UIViewController {
                     KVLoading.hide()
                     KeychainWrapper.standard.set(self.emailTextField.text!, forKey: "email")
                     KeychainWrapper.standard.set(self.passwordTextField.text!, forKey: "password")
-                    self.performSegue(withIdentifier: "home", sender: self)
+                    self.dismiss(animated: true, completion: nil)
+                    //self.performSegue(withIdentifier: "home", sender: self)
                 }
             })
         } catch {

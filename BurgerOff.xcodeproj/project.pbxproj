@@ -27,6 +27,10 @@
 		529B1DEE22538F7B002DB27D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 529B1DEC22538F7B002DB27D /* LaunchScreen.storyboard */; };
 		529B1DF922538F7B002DB27D /* BurgerOffTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529B1DF822538F7B002DB27D /* BurgerOffTests.swift */; };
 		529B1E0422538F7B002DB27D /* BurgerOffUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529B1E0322538F7B002DB27D /* BurgerOffUITests.swift */; };
+		52E20E562314106800F47F63 /* TeamOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E20E552314106800F47F63 /* TeamOptions.swift */; };
+		52E20E59231428D400F47F63 /* CreateTeam.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E20E58231428D400F47F63 /* CreateTeam.swift */; };
+		52E20E5B2314313D00F47F63 /* JoinTeam.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E20E5A2314313D00F47F63 /* JoinTeam.swift */; };
+		52E20E5D2314357000F47F63 /* TeamCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E20E5C2314357000F47F63 /* TeamCell.swift */; };
 		52F9FDAB22579D21004FB412 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F9FDAA22579D21004FB412 /* Profile.swift */; };
 		52F9FDAD22579F7E004FB412 /* CircleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F9FDAC22579F7E004FB412 /* CircleButton.swift */; };
 		CBBBFE415702B37D47B0B437 /* Pods_BurgerOff.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8AECF260AAB2E9B4C790EAF /* Pods_BurgerOff.framework */; };
@@ -76,6 +80,10 @@
 		529B1DFF22538F7B002DB27D /* BurgerOffUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BurgerOffUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		529B1E0322538F7B002DB27D /* BurgerOffUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BurgerOffUITests.swift; sourceTree = "<group>"; };
 		529B1E0522538F7B002DB27D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		52E20E552314106800F47F63 /* TeamOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamOptions.swift; sourceTree = "<group>"; };
+		52E20E58231428D400F47F63 /* CreateTeam.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CreateTeam.swift; path = /Users/joshuabest/Documents/Git/BurgerOffiOS/BurgerOff/Controller/Teams/CreateTeam.swift; sourceTree = "<absolute>"; };
+		52E20E5A2314313D00F47F63 /* JoinTeam.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinTeam.swift; sourceTree = "<group>"; };
+		52E20E5C2314357000F47F63 /* TeamCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamCell.swift; sourceTree = "<group>"; };
 		52F9FDAA22579D21004FB412 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		52F9FDAC22579F7E004FB412 /* CircleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleButton.swift; sourceTree = "<group>"; };
 		5D676A8AFFDBFE259C27D209 /* Pods-BurgerOffUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BurgerOffUITests.release.xcconfig"; path = "Target Support Files/Pods-BurgerOffUITests/Pods-BurgerOffUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -140,6 +148,7 @@
 		525E4B67225397A500263BFF /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				52E20E57231427E600F47F63 /* Teams */,
 				529B1DE322538F7A002DB27D /* AppDelegate.swift */,
 				529B1DE522538F7A002DB27D /* SignIn.swift */,
 				525E4B6A2253A9CB00263BFF /* SignUp.swift */,
@@ -211,6 +220,17 @@
 				529B1E0522538F7B002DB27D /* Info.plist */,
 			);
 			path = BurgerOffUITests;
+			sourceTree = "<group>";
+		};
+		52E20E57231427E600F47F63 /* Teams */ = {
+			isa = PBXGroup;
+			children = (
+				52E20E58231428D400F47F63 /* CreateTeam.swift */,
+				52E20E552314106800F47F63 /* TeamOptions.swift */,
+				52E20E5A2314313D00F47F63 /* JoinTeam.swift */,
+				52E20E5C2314357000F47F63 /* TeamCell.swift */,
+			);
+			path = Teams;
 			sourceTree = "<group>";
 		};
 		C7F7CA2B096AC516A3CAC676 /* Pods */ = {
@@ -484,11 +504,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				526ACCC022561CAF00780058 /* DataModels.swift in Sources */,
+				52E20E562314106800F47F63 /* TeamOptions.swift in Sources */,
 				525E4B6D2253AC3F00263BFF /* RoundedImageView.swift in Sources */,
 				52F9FDAD22579F7E004FB412 /* CircleButton.swift in Sources */,
 				525E4B6F2253AD1500263BFF /* RoundedButton.swift in Sources */,
 				52F9FDAB22579D21004FB412 /* Profile.swift in Sources */,
+				52E20E59231428D400F47F63 /* CreateTeam.swift in Sources */,
 				525E4B712253B0A600263BFF /* UIViewControllerExtension.swift in Sources */,
+				52E20E5D2314357000F47F63 /* TeamCell.swift in Sources */,
 				526ACCC22256488300780058 /* Home.swift in Sources */,
 				526ACCC722564A9500780058 /* ImageViewExtension.swift in Sources */,
 				529B1DE622538F7A002DB27D /* SignIn.swift in Sources */,
@@ -497,6 +520,7 @@
 				525E4B6B2253A9CB00263BFF /* SignUp.swift in Sources */,
 				526ACCC4225648A200780058 /* UserCell.swift in Sources */,
 				529B1DE422538F7A002DB27D /* AppDelegate.swift in Sources */,
+				52E20E5B2314313D00F47F63 /* JoinTeam.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

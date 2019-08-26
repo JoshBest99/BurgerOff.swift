@@ -80,7 +80,7 @@ class Home: UIViewController {
             
         if let navController = segue.destination as? UINavigationController {
             if let voteVC = navController.viewControllers.first as? Vote{
-                voteVC.user = selectedUser
+                //voteVC.user = selectedUser
             }
         }
         
@@ -109,13 +109,13 @@ extension Home : UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         selectedUser = users[indexPath.row]
         
-        if selectedUser.uid == FirebaseService.shared.USER_ID{
-            self.showAlert(title: "You can't do that", message: "You cannot vote for yourself")
-        } else if selectedUser!.ratings!.ratedUids.contains(FirebaseService.shared.USER_ID){
-            self.showAlert(title: "You can't do that", message: "You cannot vote for \(selectedUser.username) twice")
-        } else {
-            self.performSegue(withIdentifier: "vote", sender: self)
-        }
+//        if selectedUser.uid == FirebaseService.shared.USER_ID{
+//            self.showAlert(title: "You can't do that", message: "You cannot vote for yourself")
+//        } else if selectedUser!.ratings!.ratedUids.contains(FirebaseService.shared.USER_ID){
+//            self.showAlert(title: "You can't do that", message: "You cannot vote for \(selectedUser.username) twice")
+//        } else {
+//            self.performSegue(withIdentifier: "vote", sender: self)
+//        }
         
     }
     

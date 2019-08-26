@@ -10,31 +10,31 @@ import Foundation
 
 typealias DownloadComplete = () -> ()
 
-struct Ratings: Codable{
-    
-    var pattyTaste: Int
-    var burgerTaste: Int
-    var appearance: Int
-    var ratedUids: String
-    
-}
-
 struct User: Codable {
     
     var uid: String
     var username: String
     var profileImageUrl: String
     var burgerImageUrl: String = ""
-    var ratings: Ratings?
-    var scores: [String:String]?
+    var team: Team?
     
 }
 
 struct Score: Codable {
     
-    var appearance: String
-    var burgerTaste: String
     var pattyTaste: String
+    var burgerTaste: String
+    var appearance: String
+    
+}
+
+struct Team : Codable {
+    
+    var name: String?
+    var uid: String?
+    var score: Score?
+    var members: [User]?
+    var voteesUids: String
     
 }
 
