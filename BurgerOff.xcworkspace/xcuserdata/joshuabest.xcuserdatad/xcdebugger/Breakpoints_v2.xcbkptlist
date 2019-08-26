@@ -6,11 +6,11 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BurgerOff/Controller/Vote.swift"
-            timestampString = "588529133.8849699"
+            timestampString = "588532212.033174"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "35"
@@ -122,7 +122,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BurgerOff/Controller/Teams/CreateTeam.swift"
-            timestampString = "588529133.885151"
+            timestampString = "588532212.033361"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "71"
@@ -138,7 +138,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BurgerOff/Controller/Teams/CreateTeam.swift"
-            timestampString = "588529133.885213"
+            timestampString = "588532212.033741"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "29"
@@ -177,6 +177,102 @@
                   offsetFromSymbolStart = "200">
                </Location>
             </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BurgerOff/Controller/Vote.swift"
+            timestampString = "588532212.0339921"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
+            landmarkName = "submitRatings(pattyRating:overallRating:appearanceRating:completed:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BurgerOff/Controller/Vote.swift"
+            timestampString = "588532212.034042"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
+            landmarkName = "submitRatings(pattyRating:overallRating:appearanceRating:completed:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BurgerOff/Controller/Vote.swift"
+            timestampString = "588532212.0340869"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
+            landmarkName = "submitRatings(pattyRating:overallRating:appearanceRating:completed:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BurgerOff.Vote.(submitRatings in _83039628003AE0F580D143A6C454FA53)(pattyRating: Swift.Int, overallRating: Swift.Int, appearanceRating: Swift.Int, completed: () -&gt; ()) -&gt; ()"
+                  moduleName = "BurgerOff"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/joshuabest/Documents/Git/BurgerOffiOS/BurgerOff/Controller/Vote.swift"
+                  timestampString = "588531728.308971"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "43"
+                  endingLineNumber = "43"
+                  offsetFromSymbolStart = "4896">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Swift.Error&gt;, __C.FIRDatabaseReference) -&gt; () in BurgerOff.Vote.(submitRatings in _83039628003AE0F580D143A6C454FA53)(pattyRating: Swift.Int, overallRating: Swift.Int, appearanceRating: Swift.Int, completed: () -&gt; ()) -&gt; ()"
+                  moduleName = "BurgerOff"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/joshuabest/Documents/Git/BurgerOffiOS/BurgerOff/Controller/Vote.swift"
+                  timestampString = "588531728.3108521"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "44"
+                  endingLineNumber = "44"
+                  offsetFromSymbolStart = "164">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BurgerOff/Controller/Vote.swift"
+            timestampString = "588532212.0341311"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

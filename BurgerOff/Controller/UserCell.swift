@@ -12,20 +12,40 @@ class UserCell: UITableViewCell {
 
     @IBOutlet weak var nameLbl: UILabel!
     @IBOutlet weak var profileImageView: RoundedImageView!
+    @IBOutlet weak var profileImageViewTwo: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
     }
 
-    func configureCell(user: User){
-        nameLbl.text = user.username
-        profileImageView.loadImageUsingCacheWithUrlString(user.profileImageUrl)
+    func configureCell(team: Team){
+        nameLbl.text = team.name
+        profileImageView.loadImageUsingCacheWithUrlString(team.members![0].profileImageUrl)
         
-//        if user.ratings!.ratedUids.contains(FirebaseService.shared.USER_ID) || user.uid == FirebaseService.shared.USER_ID{
-//            nameLbl.textColor = UIColor.green
-//        } else {
-//            nameLbl.textColor = UIColor.red
-//        }
+        if team.members!.count == 2 {
+            profileImageViewTwo.loadImageUsingCacheWithUrlString(team.members![1].profileImageUrl)
+        }
+        
+        if !canVoteForTeam(team: team){
+            nameLbl.textColor = UIColor.green
+        } else {
+            nameLbl.textColor = UIColor.red
+        }
+    }
+    
+    func canVoteForTeam(team: Team) -> Bool {
+        
+        if team.voteesUids.contains(FirebaseService.shared.USER_ID){
+            return false
+        }
+        
+        for user in team.members! {
+            if user.uid.contains(FirebaseService.shared.USER_ID){
+                return false
+            }
+        }
+        
+        return true
     }
     
 }

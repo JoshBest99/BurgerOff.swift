@@ -26,7 +26,7 @@ class Vote: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.title = "Voting for: \(team.name)"
+        self.title = "Voting for: \(team.name!)"
         
         print("Team ID: \(team.uid)")
         print("My ID: \(FirebaseService.shared.USER_ID)")
@@ -85,7 +85,7 @@ class Vote: UIViewController {
     
     private func getUpdatedUserValues(completed : @escaping () -> ()){
         
-        let ref = FirebaseService.shared.USER_URL.child("teams").child(team.uid!).child("/score")
+        let ref = FirebaseService.shared.TEAM_URL.child(team.uid!).child("/score")
         
         ref.observeSingleEvent(of: .value) { snapshot in
             

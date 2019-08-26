@@ -443,15 +443,22 @@
                                                                 <constraint firstAttribute="width" constant="75" id="x14-dE-lGR"/>
                                                             </constraints>
                                                         </imageView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cki-tL-xrB">
-                                                            <rect key="frame" x="85" y="26.5" width="220" height="21.5"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cki-tL-xrB">
+                                                            <rect key="frame" x="85" y="26.5" width="135" height="21.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="08X-Qz-ytA" customClass="RoundedImageView" customModule="BurgerOff" customModuleProvider="target">
+                                                            <rect key="frame" x="230" y="0.0" width="75" height="75"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="75" id="Nbm-wO-efJ"/>
+                                                                <constraint firstAttribute="height" constant="75" id="jjJ-1m-M5x"/>
+                                                            </constraints>
+                                                        </imageView>
                                                     </subviews>
                                                     <constraints>
-                                                        <constraint firstAttribute="trailing" secondItem="cki-tL-xrB" secondAttribute="trailing" id="Ruc-25-XKo"/>
+                                                        <constraint firstItem="cki-tL-xrB" firstAttribute="centerY" secondItem="tao-e5-G3O" secondAttribute="centerY" id="zCS-ak-gqB"/>
                                                     </constraints>
                                                 </stackView>
                                             </subviews>
@@ -466,6 +473,7 @@
                                         <connections>
                                             <outlet property="nameLbl" destination="cki-tL-xrB" id="BgI-AR-dg8"/>
                                             <outlet property="profileImageView" destination="7bA-wH-f6Q" id="HPj-nN-Kuu"/>
+                                            <outlet property="profileImageViewTwo" destination="08X-Qz-ytA" id="l9w-T6-AMi"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

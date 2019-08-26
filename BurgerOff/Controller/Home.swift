@@ -16,8 +16,8 @@ class Home: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
-    private var users = [User]()
-    private var selectedUser : User!
+    private var teams = [Team]()
+    private var selectedTeam : Team!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,7 +37,7 @@ class Home: UIViewController {
     }
     
     private func getUserList(completed : @escaping DownloadComplete){
-        FirebaseService.shared.USER_URL.observeSingleEvent(of: .value, with: { snapshot in
+        FirebaseService.shared.TEAM_URL.observeSingleEvent(of: .value, with: { snapshot in
             
             guard let object = snapshot.children.allObjects as? [DataSnapshot] else { return }
            
@@ -46,8 +46,8 @@ class Home: UIViewController {
             do{
                 
                 let data = try JSONSerialization.data(withJSONObject: dict, options: .prettyPrinted)
-                let usersObject = try JSONDecoder().decode([User].self, from: data)
-                self.users = usersObject
+                let teamsObject = try JSONDecoder().decode([Team].self, from: data)
+                self.teams = teamsObject
             
             } catch {
                 self.showAlert(title: "Error", message: error.localizedDescription)
@@ -80,7 +80,7 @@ class Home: UIViewController {
             
         if let navController = segue.destination as? UINavigationController {
             if let voteVC = navController.viewControllers.first as? Vote{
-                //voteVC.user = selectedUser
+                voteVC.team = selectedTeam
             }
         }
         
@@ -90,14 +90,14 @@ class Home: UIViewController {
 extension Home : UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return users.count
+        return teams.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "usercell", for: indexPath) as! UserCell
         
-        let user = users[indexPath.row]
-        cell.configureCell(user: user)
+        let team = teams[indexPath.row]
+        cell.configureCell(team: team)
         
         return cell
     }
@@ -107,16 +107,27 @@ extension Home : UITableViewDelegate, UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        selectedUser = users[indexPath.row]
+        selectedTeam = teams[indexPath.row]
         
-//        if selectedUser.uid == FirebaseService.shared.USER_ID{
-//            self.showAlert(title: "You can't do that", message: "You cannot vote for yourself")
-//        } else if selectedUser!.ratings!.ratedUids.contains(FirebaseService.shared.USER_ID){
-//            self.showAlert(title: "You can't do that", message: "You cannot vote for \(selectedUser.username) twice")
-//        } else {
-//            self.performSegue(withIdentifier: "vote", sender: self)
-//        }
+        if isMyTeam(){
+            self.showAlert(title: "You can't do that", message: "You cannot vote for yourself")
+        } else if selectedTeam.voteesUids.contains(FirebaseService.shared.USER_ID){
+            self.showAlert(title: "You can't do that", message: "You cannot vote for \(selectedTeam.name!) twice")
+        } else {
+            self.performSegue(withIdentifier: "vote", sender: self)
+        }
         
+    }
+    
+    func isMyTeam() -> Bool {
+        
+        for user in selectedTeam.members! {
+            if user.uid.contains(FirebaseService.shared.USER_ID){
+                return true
+            }
+        }
+        
+        return false
     }
     
     

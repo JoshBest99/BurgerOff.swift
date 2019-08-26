@@ -78,6 +78,12 @@ class CreateTeam: UIViewController {
     }
     
     @IBAction func createBtnPressed(_ sender: Any) {
+    
+        if teamNameText.text!.count > 22 {
+            self.showAlert(title: "Too Long", message: "The name for your team is too long.")
+            return
+        }
+        
         KVLoading.show()
         getCurrentUser{
             KVLoading.hide()
