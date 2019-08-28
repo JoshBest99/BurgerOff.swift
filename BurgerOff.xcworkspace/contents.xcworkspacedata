@@ -2,9 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:/Users/joshuabest/Documents/Git/BurgerOffiOS/BurgerOff/Controller/Teams/CreateTeam.swift">
-   </FileRef>
-   <FileRef
       location = "group:BurgerOff.xcodeproj">
    </FileRef>
    <FileRef

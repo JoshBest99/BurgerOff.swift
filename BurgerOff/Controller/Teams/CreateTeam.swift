@@ -1,6 +1,6 @@
 //
 //  CreateTeam.swift
-//  
+//
 //
 //  Created by Joshua Best on 26/08/2019.
 //
@@ -9,14 +9,14 @@ import UIKit
 import KVLoading
 
 class CreateTeam: UIViewController {
-
+    
     @IBOutlet weak var teamNameText: UITextField!
     
     var users = [User]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
     }
     
     private func createTeam(user: User, completed : @escaping DownloadComplete) {
@@ -78,7 +78,7 @@ class CreateTeam: UIViewController {
     }
     
     @IBAction func createBtnPressed(_ sender: Any) {
-    
+        
         if teamNameText.text!.count > 22 {
             self.showAlert(title: "Too Long", message: "The name for your team is too long.")
             return

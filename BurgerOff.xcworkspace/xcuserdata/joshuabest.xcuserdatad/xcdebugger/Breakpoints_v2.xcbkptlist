@@ -122,61 +122,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BurgerOff/Controller/Teams/CreateTeam.swift"
-            timestampString = "588532212.033361"
+            timestampString = "588709128.229879"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "71"
-            endingLineNumber = "71"
-            landmarkName = "getCurrentUser(completed:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "BurgerOff/Controller/Teams/CreateTeam.swift"
-            timestampString = "588532212.033741"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "29"
-            endingLineNumber = "29"
-            landmarkName = "createTeam(user:completed:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "BurgerOff.CreateTeam.(createTeam in _8D04AF02AFFA01BF7EDE3094E17DF7AF)(user: BurgerOff.User) -&gt; ()"
-                  moduleName = "BurgerOff"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/joshuabest/Documents/Git/BurgerOffiOS/BurgerOff/Controller/Teams/CreateTeam.swift"
-                  timestampString = "588528913.21903"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "29"
-                  endingLineNumber = "29"
-                  offsetFromSymbolStart = "1628">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;Swift.Error&gt;, __C.FIRDatabaseReference) -&gt; () in BurgerOff.CreateTeam.(createTeam in _8D04AF02AFFA01BF7EDE3094E17DF7AF)(user: BurgerOff.User) -&gt; ()"
-                  moduleName = "BurgerOff"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/joshuabest/Documents/Git/BurgerOffiOS/BurgerOff/Controller/Teams/CreateTeam.swift"
-                  timestampString = "588528913.221824"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "30"
-                  endingLineNumber = "30"
-                  offsetFromSymbolStart = "200">
-               </Location>
-            </Locations>
+            startingLineNumber = "97"
+            endingLineNumber = "97">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy

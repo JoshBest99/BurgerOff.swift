@@ -10,6 +10,7 @@
 		2EACB69C2B3E477C5B4BD40C /* Pods_BurgerOffTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E42F8DD21CF01E5BC9DFF55E /* Pods_BurgerOffTests.framework */; };
 		371D6B0914D95AC963EADECF /* Pods_BurgerOffUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1BEFA080DD7D370A020DF9D /* Pods_BurgerOffUITests.framework */; };
 		52009282225741870001E761 /* Vote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52009281225741870001E761 /* Vote.swift */; };
+		52441F7D2316FBD9002C85DE /* CreateTeam.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52441F7C2316FBD9002C85DE /* CreateTeam.swift */; };
 		525E4B642253969600263BFF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 525E4B632253969600263BFF /* GoogleService-Info.plist */; };
 		525E4B6B2253A9CB00263BFF /* SignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525E4B6A2253A9CB00263BFF /* SignUp.swift */; };
 		525E4B6D2253AC3F00263BFF /* RoundedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525E4B6C2253AC3F00263BFF /* RoundedImageView.swift */; };
@@ -28,7 +29,6 @@
 		529B1DF922538F7B002DB27D /* BurgerOffTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529B1DF822538F7B002DB27D /* BurgerOffTests.swift */; };
 		529B1E0422538F7B002DB27D /* BurgerOffUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529B1E0322538F7B002DB27D /* BurgerOffUITests.swift */; };
 		52E20E562314106800F47F63 /* TeamOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E20E552314106800F47F63 /* TeamOptions.swift */; };
-		52E20E59231428D400F47F63 /* CreateTeam.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E20E58231428D400F47F63 /* CreateTeam.swift */; };
 		52E20E5B2314313D00F47F63 /* JoinTeam.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E20E5A2314313D00F47F63 /* JoinTeam.swift */; };
 		52E20E5D2314357000F47F63 /* TeamCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E20E5C2314357000F47F63 /* TeamCell.swift */; };
 		52F9FDAB22579D21004FB412 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F9FDAA22579D21004FB412 /* Profile.swift */; };
@@ -57,6 +57,7 @@
 		015FAB997A2C1E847895F7CF /* Pods-BurgerOffTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BurgerOffTests.debug.xcconfig"; path = "Target Support Files/Pods-BurgerOffTests/Pods-BurgerOffTests.debug.xcconfig"; sourceTree = "<group>"; };
 		29067B7797414230CD3D4AB2 /* Pods-BurgerOffTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BurgerOffTests.release.xcconfig"; path = "Target Support Files/Pods-BurgerOffTests/Pods-BurgerOffTests.release.xcconfig"; sourceTree = "<group>"; };
 		52009281225741870001E761 /* Vote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vote.swift; sourceTree = "<group>"; };
+		52441F7C2316FBD9002C85DE /* CreateTeam.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTeam.swift; sourceTree = "<group>"; };
 		525E4B632253969600263BFF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		525E4B6A2253A9CB00263BFF /* SignUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp.swift; sourceTree = "<group>"; };
 		525E4B6C2253AC3F00263BFF /* RoundedImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedImageView.swift; sourceTree = "<group>"; };
@@ -81,7 +82,6 @@
 		529B1E0322538F7B002DB27D /* BurgerOffUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BurgerOffUITests.swift; sourceTree = "<group>"; };
 		529B1E0522538F7B002DB27D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		52E20E552314106800F47F63 /* TeamOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamOptions.swift; sourceTree = "<group>"; };
-		52E20E58231428D400F47F63 /* CreateTeam.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CreateTeam.swift; path = /Users/joshuabest/Documents/Git/BurgerOffiOS/BurgerOff/Controller/Teams/CreateTeam.swift; sourceTree = "<absolute>"; };
 		52E20E5A2314313D00F47F63 /* JoinTeam.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinTeam.swift; sourceTree = "<group>"; };
 		52E20E5C2314357000F47F63 /* TeamCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamCell.swift; sourceTree = "<group>"; };
 		52F9FDAA22579D21004FB412 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
@@ -225,10 +225,10 @@
 		52E20E57231427E600F47F63 /* Teams */ = {
 			isa = PBXGroup;
 			children = (
-				52E20E58231428D400F47F63 /* CreateTeam.swift */,
 				52E20E552314106800F47F63 /* TeamOptions.swift */,
 				52E20E5A2314313D00F47F63 /* JoinTeam.swift */,
 				52E20E5C2314357000F47F63 /* TeamCell.swift */,
+				52441F7C2316FBD9002C85DE /* CreateTeam.swift */,
 			);
 			path = Teams;
 			sourceTree = "<group>";
@@ -503,13 +503,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52441F7D2316FBD9002C85DE /* CreateTeam.swift in Sources */,
 				526ACCC022561CAF00780058 /* DataModels.swift in Sources */,
 				52E20E562314106800F47F63 /* TeamOptions.swift in Sources */,
 				525E4B6D2253AC3F00263BFF /* RoundedImageView.swift in Sources */,
 				52F9FDAD22579F7E004FB412 /* CircleButton.swift in Sources */,
 				525E4B6F2253AD1500263BFF /* RoundedButton.swift in Sources */,
 				52F9FDAB22579D21004FB412 /* Profile.swift in Sources */,
-				52E20E59231428D400F47F63 /* CreateTeam.swift in Sources */,
 				525E4B712253B0A600263BFF /* UIViewControllerExtension.swift in Sources */,
 				52E20E5D2314357000F47F63 /* TeamCell.swift in Sources */,
 				526ACCC22256488300780058 /* Home.swift in Sources */,
