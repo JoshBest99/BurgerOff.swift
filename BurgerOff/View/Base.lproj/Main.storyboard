@@ -489,18 +489,6 @@
                         <viewLayoutGuide key="safeArea" id="z0P-Dn-T4h"/>
                     </view>
                     <navigationItem key="navigationItem" title="Contestants" leftItemsSupplementBackButton="YES" id="oMP-j4-gTd">
-                        <barButtonItem key="leftBarButtonItem" title="Item" style="plain" id="fNK-fn-dgb">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="f2k-DF-gGE">
-                                <rect key="frame" x="16" y="7" width="83" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Settings">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="profileBtnPressed:" destination="lf6-RG-6KM" eventType="touchUpInside" id="ifd-yI-X07"/>
-                                </connections>
-                            </button>
-                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" style="plain" id="JQo-t6-cyw">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="jU9-lE-JlG">
                                 <rect key="frame" x="276" y="7" width="83" height="30"/>
@@ -707,7 +695,6 @@
         <!--Team Options-->
         <scene sceneID="HUu-3z-8kp">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="bHL-Eb-320" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="teamoptions" id="aeW-SN-1eU" customClass="TeamOptions" customModule="BurgerOff" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="asr-84-ccr">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -810,6 +797,7 @@
                         <segue destination="Ten-pg-EZ2" kind="showDetail" identifier="jointeam" id="HVg-yM-Kpm"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bHL-Eb-320" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1017" y="-1376"/>
         </scene>
@@ -911,6 +899,6 @@
         <image name="edit" width="64" height="64"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="b3s-Ao-UEL"/>
+        <segue reference="028-45-O6t"/>
     </inferredMetricsTieBreakers>
 </document>
